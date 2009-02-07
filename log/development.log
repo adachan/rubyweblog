@@ -1,0 +1,111 @@
+WARNING: You're using the Ruby-based MySQL library that ships with Rails. This library is not suited for production. Please install the C-based MySQL library instead (gem install mysql).
+  [4;36;1mSQL (0.071512)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.044237)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+WARNING: You're using the Ruby-based MySQL library that ships with Rails. This library is not suited for production. Please install the C-based MySQL library instead (gem install mysql).
+  [4;36;1mSQL (0.001020)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.000880)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mSQL (0.126844)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (0.478094)[0m   [0mCREATE TABLE `schema_migrations` (`version` varchar(255) NOT NULL) ENGINE=InnoDB[0m
+  [4;36;1mSQL (0.432184)[0m   [0;1mCREATE UNIQUE INDEX `unique_schema_migrations` ON `schema_migrations` (`version`)[0m
+  [4;35;1mSQL (0.020548)[0m   [0mSHOW TABLES[0m
+  [4;36;1mSQL (0.002145)[0m   [0;1mSELECT version FROM schema_migrations[0m
+Migrating to CreatePosts (20090206021747)
+  [4;35;1mSQL (0.025537)[0m   [0mSELECT version FROM schema_migrations[0m
+  [4;36;1mSQL (0.126286)[0m   [0;1mCREATE TABLE `posts` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `title` varchar(255) DEFAULT NULL NULL, `created_at` datetime DEFAULT NULL NULL, `updated_at` datetime DEFAULT NULL NULL) ENGINE=InnoDB[0m
+  [4;35;1mSQL (0.207199)[0m   [0mINSERT INTO schema_migrations (version) VALUES ('20090206021747')[0m
+  [4;36;1mSQL (0.001715)[0m   [0;1mSELECT version FROM schema_migrations[0m
+  [4;35;1mSQL (0.002375)[0m   [0mSHOW TABLES[0m
+  [4;36;1mSQL (0.172075)[0m   [0;1mSHOW FIELDS FROM `posts`[0m
+  [4;35;1mSQL (0.035694)[0m   [0mdescribe `posts`[0m
+  [4;36;1mSQL (0.059426)[0m   [0;1mSHOW KEYS FROM `posts`[0m
+WARNING: You're using the Ruby-based MySQL library that ships with Rails. This library is not suited for production. Please install the C-based MySQL library instead (gem install mysql).
+  [4;36;1mSQL (0.001052)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.000838)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mSQL (0.041735)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (0.002265)[0m   [0mSELECT version FROM schema_migrations[0m
+Migrating to CreatePosts (20090206021747)
+  [4;36;1mSQL (0.001697)[0m   [0;1mSELECT version FROM schema_migrations[0m
+Migrating to AddBodyToPost (20090206022608)
+  [4;35;1mSQL (0.002272)[0m   [0mSELECT version FROM schema_migrations[0m
+  [4;36;1mSQL (0.417485)[0m   [0;1mALTER TABLE `posts` ADD `body` text[0m
+  [4;35;1mSQL (0.047189)[0m   [0mINSERT INTO schema_migrations (version) VALUES ('20090206022608')[0m
+  [4;36;1mSQL (0.002628)[0m   [0;1mSELECT version FROM schema_migrations[0m
+  [4;35;1mSQL (0.002381)[0m   [0mSHOW TABLES[0m
+  [4;36;1mSQL (0.037999)[0m   [0;1mSHOW FIELDS FROM `posts`[0m
+  [4;35;1mSQL (0.028673)[0m   [0mdescribe `posts`[0m
+  [4;36;1mSQL (0.010307)[0m   [0;1mSHOW KEYS FROM `posts`[0m
+WARNING: You're using the Ruby-based MySQL library that ships with Rails. This library is not suited for production. Please install the C-based MySQL library instead (gem install mysql).
+  [4;36;1mSQL (0.000971)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.000842)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mSQL (0.093187)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (0.016281)[0m   [0mSELECT version FROM schema_migrations[0m
+  [4;36;1mSQL (0.001926)[0m   [0;1mSELECT version FROM schema_migrations[0m
+  [4;35;1mSQL (0.011044)[0m   [0mSHOW TABLES[0m
+  [4;36;1mSQL (0.031813)[0m   [0;1mSHOW FIELDS FROM `posts`[0m
+  [4;35;1mSQL (0.027802)[0m   [0mdescribe `posts`[0m
+  [4;36;1mSQL (0.029335)[0m   [0;1mSHOW KEYS FROM `posts`[0m
+  [4;35;1mSQL (0.000682)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.000582)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+  [4;35;1mSQL (0.557387)[0m   [0mDROP DATABASE IF EXISTS `rubyweblog_test`[0m
+  [4;36;1mSQL (0.008543)[0m   [0;1mCREATE DATABASE `rubyweblog_test` DEFAULT CHARACTER SET `utf8`[0m
+  [4;35;1mSQL (0.000829)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.000603)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+  [4;35;1mSQL (0.002305)[0m   [0mSHOW TABLES[0m
+  [4;36;1mSQL (0.344825)[0m   [0;1mCREATE TABLE `posts` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `title` varchar(255) DEFAULT NULL NULL, `created_at` datetime DEFAULT NULL NULL, `updated_at` datetime DEFAULT NULL NULL, `body` text DEFAULT NULL NULL) ENGINE=InnoDB[0m
+  [4;35;1mSQL (0.002556)[0m   [0mSHOW TABLES[0m
+  [4;36;1mSQL (0.125765)[0m   [0;1mCREATE TABLE `schema_migrations` (`version` varchar(255) NOT NULL) ENGINE=InnoDB[0m
+  [4;35;1mSQL (0.398271)[0m   [0mCREATE UNIQUE INDEX `unique_schema_migrations` ON `schema_migrations` (`version`)[0m
+  [4;36;1mSQL (0.002437)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (0.003076)[0m   [0mSELECT version FROM `schema_migrations`[0m
+  [4;36;1mSQL (0.076716)[0m   [0;1mINSERT INTO `schema_migrations` (version) VALUES ('20090206022608')[0m
+  [4;35;1mSQL (0.034387)[0m   [0mINSERT INTO `schema_migrations` (version) VALUES ('20090206021747')[0m
+WARNING: You're using the Ruby-based MySQL library that ships with Rails. This library is not suited for production. Please install the C-based MySQL library instead (gem install mysql).
+  [4;36;1mSQL (0.034445)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.015087)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mSQL (0.136484)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (0.086743)[0m   [0mSELECT version FROM schema_migrations[0m
+  [4;36;1mSQL (0.002012)[0m   [0;1mSELECT version FROM schema_migrations[0m
+  [4;35;1mSQL (0.015636)[0m   [0mSHOW TABLES[0m
+  [4;36;1mSQL (0.147529)[0m   [0;1mSHOW FIELDS FROM `posts`[0m
+  [4;35;1mSQL (0.023346)[0m   [0mdescribe `posts`[0m
+  [4;36;1mSQL (0.035491)[0m   [0;1mSHOW KEYS FROM `posts`[0m
+  [4;35;1mSQL (0.000739)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.000736)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+  [4;35;1mSQL (0.455444)[0m   [0mDROP DATABASE IF EXISTS `rubyweblog_test`[0m
+  [4;36;1mSQL (0.002143)[0m   [0;1mCREATE DATABASE `rubyweblog_test` DEFAULT CHARACTER SET `utf8`[0m
+  [4;35;1mSQL (0.000740)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.000598)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+  [4;35;1mSQL (0.001832)[0m   [0mSHOW TABLES[0m
+  [4;36;1mSQL (0.235116)[0m   [0;1mCREATE TABLE `posts` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `title` varchar(255) DEFAULT NULL NULL, `created_at` datetime DEFAULT NULL NULL, `updated_at` datetime DEFAULT NULL NULL, `body` text DEFAULT NULL NULL) ENGINE=InnoDB[0m
+  [4;35;1mSQL (0.002497)[0m   [0mSHOW TABLES[0m
+  [4;36;1mSQL (0.075544)[0m   [0;1mCREATE TABLE `schema_migrations` (`version` varchar(255) NOT NULL) ENGINE=InnoDB[0m
+  [4;35;1mSQL (0.284343)[0m   [0mCREATE UNIQUE INDEX `unique_schema_migrations` ON `schema_migrations` (`version`)[0m
+  [4;36;1mSQL (0.002882)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (0.005502)[0m   [0mSELECT version FROM `schema_migrations`[0m
+  [4;36;1mSQL (0.087209)[0m   [0;1mINSERT INTO `schema_migrations` (version) VALUES ('20090206022608')[0m
+  [4;35;1mSQL (0.087818)[0m   [0mINSERT INTO `schema_migrations` (version) VALUES ('20090206021747')[0m
+WARNING: You're using the Ruby-based MySQL library that ships with Rails. This library is not suited for production. Please install the C-based MySQL library instead (gem install mysql).
+  [4;36;1mSQL (0.000943)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.000841)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mSQL (0.003270)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (0.001839)[0m   [0mSELECT version FROM schema_migrations[0m
+  [4;36;1mSQL (0.001933)[0m   [0;1mSELECT version FROM schema_migrations[0m
+  [4;35;1mSQL (0.017468)[0m   [0mSHOW TABLES[0m
+  [4;36;1mSQL (0.009191)[0m   [0;1mSHOW FIELDS FROM `posts`[0m
+  [4;35;1mSQL (0.025339)[0m   [0mdescribe `posts`[0m
+  [4;36;1mSQL (0.014001)[0m   [0;1mSHOW KEYS FROM `posts`[0m
+  [4;35;1mSQL (0.000703)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.000737)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+  [4;35;1mSQL (0.171426)[0m   [0mDROP DATABASE IF EXISTS `rubyweblog_test`[0m
+  [4;36;1mSQL (0.025690)[0m   [0;1mCREATE DATABASE `rubyweblog_test` DEFAULT CHARACTER SET `utf8`[0m
+  [4;35;1mSQL (0.000717)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.000716)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+  [4;35;1mSQL (0.001955)[0m   [0mSHOW TABLES[0m
+  [4;36;1mSQL (0.117781)[0m   [0;1mCREATE TABLE `posts` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `title` varchar(255) DEFAULT NULL NULL, `created_at` datetime DEFAULT NULL NULL, `updated_at` datetime DEFAULT NULL NULL, `body` text DEFAULT NULL NULL) ENGINE=InnoDB[0m
+  [4;35;1mSQL (0.002574)[0m   [0mSHOW TABLES[0m
+  [4;36;1mSQL (0.094717)[0m   [0;1mCREATE TABLE `schema_migrations` (`version` varchar(255) NOT NULL) ENGINE=InnoDB[0m
+  [4;35;1mSQL (0.323760)[0m   [0mCREATE UNIQUE INDEX `unique_schema_migrations` ON `schema_migrations` (`version`)[0m
+  [4;36;1mSQL (0.002826)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (0.004783)[0m   [0mSELECT version FROM `schema_migrations`[0m
+  [4;36;1mSQL (0.051335)[0m   [0;1mINSERT INTO `schema_migrations` (version) VALUES ('20090206022608')[0m
+  [4;35;1mSQL (0.043453)[0m   [0mINSERT INTO `schema_migrations` (version) VALUES ('20090206021747')[0m

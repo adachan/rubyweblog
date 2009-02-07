@@ -1,0 +1,277 @@
+WARNING: You're using the Ruby-based MySQL library that ships with Rails. This library is not suited for production. Please install the C-based MySQL library instead (gem install mysql).
+  [4;36;1mSQL (0.100520)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.037698)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mSQL (0.073984)[0m   [0;1mCREATE DATABASE `rubyweblog_test` DEFAULT CHARACTER SET `utf8` COLLATE `utf8_general_ci`[0m
+WARNING: You're using the Ruby-based MySQL library that ships with Rails. This library is not suited for production. Please install the C-based MySQL library instead (gem install mysql).
+  [4;36;1mSQL (0.002265)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.002304)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mSQL (0.000897)[0m   [0;1mBEGIN[0m
+  [4;35;1mSQL (0.001094)[0m   [0mROLLBACK[0m
+WARNING: You're using the Ruby-based MySQL library that ships with Rails. This library is not suited for production. Please install the C-based MySQL library instead (gem install mysql).
+  [4;36;1mSQL (0.002303)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.001869)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mSQL (0.000892)[0m   [0;1mBEGIN[0m
+  [4;35;1mSQL (0.030768)[0m   [0mSELECT count(*) AS count_all FROM `posts` [0m
+
+
+Processing PostsController#create (for 0.0.0.0 at 2009-02-05 21:41:24) [POST]
+  Session ID: 
+  Parameters: {"post"=>{}, "action"=>"create", "controller"=>"posts"}
+  [4;36;1mPost Create (0.001664)[0m   [0;1mINSERT INTO `posts` (`title`, `created_at`, `updated_at`, `body`) VALUES(NULL, '2009-02-06 02:41:24', '2009-02-06 02:41:24', NULL)[0m
+Redirected to http://test.host/posts/996332878
+Completed in 0.04610 (21 reqs/sec) | DB: 0.15035 (326%) | 302 Found [http://test.host/posts?]
+  [4;35;1mSQL (0.002550)[0m   [0mSELECT count(*) AS count_all FROM `posts` [0m
+  [4;36;1mSQL (0.042142)[0m   [0;1mROLLBACK[0m
+  [4;35;1mSQL (0.000953)[0m   [0mBEGIN[0m
+  [4;36;1mSQL (0.003846)[0m   [0;1mSELECT count(*) AS count_all FROM `posts` [0m
+  [4;35;1mPost Load (0.038153)[0m   [0mSELECT * FROM `posts` WHERE (`posts`.`id` = 953125641) [0m
+
+
+Processing PostsController#destroy (for 0.0.0.0 at 2009-02-05 21:41:24) [DELETE]
+  Session ID: 
+  Parameters: {"action"=>"destroy", "id"=>"953125641", "controller"=>"posts"}
+  [4;36;1mPost Load (0.014194)[0m   [0;1mSELECT * FROM `posts` WHERE (`posts`.`id` = 953125641) [0m
+  [4;35;1mPost Destroy (0.001754)[0m   [0m DELETE FROM `posts`
+ WHERE `id` = 953125641
+[0m
+Redirected to http://test.host/posts
+Completed in 0.02520 (39 reqs/sec) | DB: 0.10359 (411%) | 302 Found [http://test.host/posts/953125641]
+  [4;36;1mSQL (0.002917)[0m   [0;1mSELECT count(*) AS count_all FROM `posts` [0m
+  [4;35;1mSQL (0.032878)[0m   [0mROLLBACK[0m
+  [4;36;1mSQL (0.001285)[0m   [0;1mBEGIN[0m
+  [4;35;1mPost Load (0.005675)[0m   [0mSELECT * FROM `posts` WHERE (`posts`.`id` = 953125641) [0m
+
+
+Processing PostsController#edit (for 0.0.0.0 at 2009-02-05 21:41:24) [GET]
+  Session ID: 
+  Parameters: {"action"=>"edit", "id"=>"953125641", "controller"=>"posts"}
+  [4;36;1mPost Load (0.007864)[0m   [0;1mSELECT * FROM `posts` WHERE (`posts`.`id` = 953125641) [0m
+Rendering template within layouts/posts
+Rendering posts/edit
+Completed in 0.06472 (15 reqs/sec) | Rendering: 0.05122 (79%) | DB: 0.05062 (78%) | 200 OK [http://test.host/posts/953125641/edit]
+  [4;35;1mSQL (0.001108)[0m   [0mROLLBACK[0m
+  [4;36;1mSQL (0.001168)[0m   [0;1mBEGIN[0m
+
+
+Processing PostsController#index (for 0.0.0.0 at 2009-02-05 21:41:24) [GET]
+  Session ID: 
+  Parameters: {"action"=>"index", "controller"=>"posts"}
+  [4;35;1mPost Load (0.005544)[0m   [0mSELECT * FROM `posts` [0m
+Rendering template within layouts/posts
+Rendering posts/index
+Completed in 0.03421 (29 reqs/sec) | Rendering: 0.02124 (62%) | DB: 0.00782 (22%) | 200 OK [http://test.host/posts]
+  [4;36;1mSQL (0.001161)[0m   [0;1mROLLBACK[0m
+  [4;35;1mSQL (0.001128)[0m   [0mBEGIN[0m
+
+
+Processing PostsController#new (for 0.0.0.0 at 2009-02-05 21:41:24) [GET]
+  Session ID: 
+  Parameters: {"action"=>"new", "controller"=>"posts"}
+Rendering template within layouts/posts
+Rendering posts/new
+Completed in 0.03774 (26 reqs/sec) | Rendering: 0.03161 (83%) | DB: 0.00229 (6%) | 200 OK [http://test.host/posts/new]
+  [4;36;1mSQL (0.001194)[0m   [0;1mROLLBACK[0m
+  [4;35;1mSQL (0.001119)[0m   [0mBEGIN[0m
+  [4;36;1mPost Load (0.006153)[0m   [0;1mSELECT * FROM `posts` WHERE (`posts`.`id` = 953125641) [0m
+
+
+Processing PostsController#show (for 0.0.0.0 at 2009-02-05 21:41:24) [GET]
+  Session ID: 
+  Parameters: {"action"=>"show", "id"=>"953125641", "controller"=>"posts"}
+  [4;35;1mPost Load (0.009456)[0m   [0mSELECT * FROM `posts` WHERE (`posts`.`id` = 953125641) [0m
+Rendering template within layouts/posts
+Rendering posts/show
+Completed in 0.04103 (24 reqs/sec) | Rendering: 0.01190 (29%) | DB: 0.01792 (43%) | 200 OK [http://test.host/posts/953125641]
+  [4;36;1mSQL (0.001086)[0m   [0;1mROLLBACK[0m
+  [4;35;1mSQL (0.001200)[0m   [0mBEGIN[0m
+  [4;36;1mPost Load (0.006221)[0m   [0;1mSELECT * FROM `posts` WHERE (`posts`.`id` = 953125641) [0m
+
+
+Processing PostsController#update (for 0.0.0.0 at 2009-02-05 21:41:24) [PUT]
+  Session ID: 
+  Parameters: {"post"=>{}, "action"=>"update", "id"=>"953125641", "controller"=>"posts"}
+  [4;35;1mPost Load (0.012504)[0m   [0mSELECT * FROM `posts` WHERE (`posts`.`id` = 953125641) [0m
+Redirected to http://test.host/posts/953125641
+Completed in 0.05122 (19 reqs/sec) | DB: 0.02101 (41%) | 302 Found [http://test.host/posts/953125641?]
+  [4;36;1mSQL (0.001103)[0m   [0;1mROLLBACK[0m
+WARNING: You're using the Ruby-based MySQL library that ships with Rails. This library is not suited for production. Please install the C-based MySQL library instead (gem install mysql).
+  [4;36;1mSQL (0.001374)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.002131)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mSQL (0.000946)[0m   [0;1mBEGIN[0m
+  [4;35;1mSQL (0.001712)[0m   [0mROLLBACK[0m
+WARNING: You're using the Ruby-based MySQL library that ships with Rails. This library is not suited for production. Please install the C-based MySQL library instead (gem install mysql).
+  [4;36;1mSQL (0.001617)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.001299)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mSQL (0.000893)[0m   [0;1mBEGIN[0m
+  [4;35;1mSQL (0.016339)[0m   [0mSELECT count(*) AS count_all FROM `posts` [0m
+
+
+Processing PostsController#create (for 0.0.0.0 at 2009-02-05 21:43:12) [POST]
+  Session ID: 
+  Parameters: {"post"=>{}, "action"=>"create", "controller"=>"posts"}
+Rendering template within layouts/posts
+Rendering posts/new
+Completed in 0.09388 (10 reqs/sec) | Rendering: 0.05839 (62%) | DB: 0.12338 (131%) | 200 OK [http://test.host/posts?]
+  [4;36;1mSQL (0.002497)[0m   [0;1mSELECT count(*) AS count_all FROM `posts` [0m
+  [4;35;1mSQL (0.001262)[0m   [0mROLLBACK[0m
+  [4;36;1mSQL (0.000972)[0m   [0;1mBEGIN[0m
+  [4;35;1mSQL (0.003212)[0m   [0mSELECT count(*) AS count_all FROM `posts` [0m
+  [4;36;1mPost Load (0.010280)[0m   [0;1mSELECT * FROM `posts` WHERE (`posts`.`id` = 953125641) [0m
+
+
+Processing PostsController#destroy (for 0.0.0.0 at 2009-02-05 21:43:12) [DELETE]
+  Session ID: 
+  Parameters: {"action"=>"destroy", "id"=>"953125641", "controller"=>"posts"}
+  [4;35;1mPost Load (0.006671)[0m   [0mSELECT * FROM `posts` WHERE (`posts`.`id` = 953125641) [0m
+  [4;36;1mPost Destroy (0.001362)[0m   [0;1m DELETE FROM `posts`
+ WHERE `id` = 953125641
+[0m
+Redirected to http://test.host/posts
+Completed in 0.02165 (46 reqs/sec) | DB: 0.02626 (121%) | 302 Found [http://test.host/posts/953125641]
+  [4;35;1mSQL (0.002821)[0m   [0mSELECT count(*) AS count_all FROM `posts` [0m
+  [4;36;1mSQL (0.036956)[0m   [0;1mROLLBACK[0m
+  [4;35;1mSQL (0.002085)[0m   [0mBEGIN[0m
+  [4;36;1mPost Load (0.005524)[0m   [0;1mSELECT * FROM `posts` WHERE (`posts`.`id` = 953125641) [0m
+
+
+Processing PostsController#edit (for 0.0.0.0 at 2009-02-05 21:43:12) [GET]
+  Session ID: 
+  Parameters: {"action"=>"edit", "id"=>"953125641", "controller"=>"posts"}
+  [4;35;1mPost Load (0.006136)[0m   [0mSELECT * FROM `posts` WHERE (`posts`.`id` = 953125641) [0m
+Rendering template within layouts/posts
+Rendering posts/edit
+Completed in 0.04064 (24 reqs/sec) | Rendering: 0.03066 (75%) | DB: 0.05352 (131%) | 200 OK [http://test.host/posts/953125641/edit]
+  [4;36;1mSQL (0.001170)[0m   [0;1mROLLBACK[0m
+  [4;35;1mSQL (0.001201)[0m   [0mBEGIN[0m
+
+
+Processing PostsController#index (for 0.0.0.0 at 2009-02-05 21:43:12) [GET]
+  Session ID: 
+  Parameters: {"action"=>"index", "controller"=>"posts"}
+  [4;36;1mPost Load (0.007107)[0m   [0;1mSELECT * FROM `posts` [0m
+Rendering template within layouts/posts
+Rendering posts/index
+Completed in 0.03426 (29 reqs/sec) | Rendering: 0.01971 (57%) | DB: 0.00948 (27%) | 200 OK [http://test.host/posts]
+  [4;35;1mSQL (0.001130)[0m   [0mROLLBACK[0m
+  [4;36;1mSQL (0.001100)[0m   [0;1mBEGIN[0m
+
+
+Processing PostsController#new (for 0.0.0.0 at 2009-02-05 21:43:12) [GET]
+  Session ID: 
+  Parameters: {"action"=>"new", "controller"=>"posts"}
+Rendering template within layouts/posts
+Rendering posts/new
+Completed in 0.04160 (24 reqs/sec) | Rendering: 0.03877 (93%) | DB: 0.00223 (5%) | 200 OK [http://test.host/posts/new]
+  [4;35;1mSQL (0.001050)[0m   [0mROLLBACK[0m
+  [4;36;1mSQL (0.001121)[0m   [0;1mBEGIN[0m
+  [4;35;1mPost Load (0.008457)[0m   [0mSELECT * FROM `posts` WHERE (`posts`.`id` = 953125641) [0m
+
+
+Processing PostsController#show (for 0.0.0.0 at 2009-02-05 21:43:12) [GET]
+  Session ID: 
+  Parameters: {"action"=>"show", "id"=>"953125641", "controller"=>"posts"}
+  [4;36;1mPost Load (0.008494)[0m   [0;1mSELECT * FROM `posts` WHERE (`posts`.`id` = 953125641) [0m
+Rendering template within layouts/posts
+Rendering posts/show
+Completed in 0.03334 (29 reqs/sec) | Rendering: 0.01164 (34%) | DB: 0.01912 (57%) | 200 OK [http://test.host/posts/953125641]
+  [4;35;1mSQL (0.002136)[0m   [0mROLLBACK[0m
+  [4;36;1mSQL (0.001196)[0m   [0;1mBEGIN[0m
+  [4;35;1mPost Load (0.006437)[0m   [0mSELECT * FROM `posts` WHERE (`posts`.`id` = 953125641) [0m
+
+
+Processing PostsController#update (for 0.0.0.0 at 2009-02-05 21:43:12) [PUT]
+  Session ID: 
+  Parameters: {"post"=>{}, "action"=>"update", "id"=>"953125641", "controller"=>"posts"}
+  [4;36;1mPost Load (0.005898)[0m   [0;1mSELECT * FROM `posts` WHERE (`posts`.`id` = 953125641) [0m
+Rendering template within layouts/posts
+Rendering posts/edit
+Completed in 0.04408 (22 reqs/sec) | Rendering: 0.02749 (62%) | DB: 0.01567 (35%) | 200 OK [http://test.host/posts/953125641?]
+  [4;35;1mSQL (0.001751)[0m   [0mROLLBACK[0m
+WARNING: You're using the Ruby-based MySQL library that ships with Rails. This library is not suited for production. Please install the C-based MySQL library instead (gem install mysql).
+  [4;36;1mSQL (0.001372)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.001262)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mSQL (0.000911)[0m   [0;1mBEGIN[0m
+  [4;35;1mSQL (0.011765)[0m   [0mSELECT count(*) AS count_all FROM `posts` [0m
+
+
+Processing PostsController#create (for 0.0.0.0 at 2009-02-05 21:47:04) [POST]
+  Session ID: 
+  Parameters: {"post"=>{"title"=>"Nene", "body"=>"Nenes are Hawaiian Geese"}, "action"=>"create", "controller"=>"posts"}
+  [4;36;1mPost Create (0.001695)[0m   [0;1mINSERT INTO `posts` (`title`, `created_at`, `updated_at`, `body`) VALUES('Nene', '2009-02-06 02:47:04', '2009-02-06 02:47:04', 'Nenes are Hawaiian Geese')[0m
+Redirected to http://test.host/posts/996332878
+Completed in 0.05532 (18 reqs/sec) | DB: 0.16849 (304%) | 302 Found [http://test.host/posts?post%5Bbody%5D=Nenes+are+Hawaiian+Geese&post%5Btitle%5D=Nene]
+  [4;35;1mSQL (0.002997)[0m   [0mSELECT count(*) AS count_all FROM `posts` [0m
+  [4;36;1mSQL (0.040148)[0m   [0;1mROLLBACK[0m
+  [4;35;1mSQL (0.001113)[0m   [0mBEGIN[0m
+  [4;36;1mSQL (0.003434)[0m   [0;1mSELECT count(*) AS count_all FROM `posts` [0m
+  [4;35;1mPost Load (0.009409)[0m   [0mSELECT * FROM `posts` WHERE (`posts`.`id` = 953125641) [0m
+
+
+Processing PostsController#destroy (for 0.0.0.0 at 2009-02-05 21:47:04) [DELETE]
+  Session ID: 
+  Parameters: {"action"=>"destroy", "id"=>"953125641", "controller"=>"posts"}
+  [4;36;1mPost Load (0.007014)[0m   [0;1mSELECT * FROM `posts` WHERE (`posts`.`id` = 953125641) [0m
+  [4;35;1mPost Destroy (0.001379)[0m   [0m DELETE FROM `posts`
+ WHERE `id` = 953125641
+[0m
+Redirected to http://test.host/posts
+Completed in 0.01877 (53 reqs/sec) | DB: 0.06549 (348%) | 302 Found [http://test.host/posts/953125641]
+  [4;36;1mSQL (0.002390)[0m   [0;1mSELECT count(*) AS count_all FROM `posts` [0m
+  [4;35;1mSQL (0.039338)[0m   [0mROLLBACK[0m
+  [4;36;1mSQL (0.000991)[0m   [0;1mBEGIN[0m
+  [4;35;1mPost Load (0.006168)[0m   [0mSELECT * FROM `posts` WHERE (`posts`.`id` = 953125641) [0m
+
+
+Processing PostsController#edit (for 0.0.0.0 at 2009-02-05 21:47:04) [GET]
+  Session ID: 
+  Parameters: {"action"=>"edit", "id"=>"953125641", "controller"=>"posts"}
+  [4;36;1mPost Load (0.008397)[0m   [0;1mSELECT * FROM `posts` WHERE (`posts`.`id` = 953125641) [0m
+Rendering template within layouts/posts
+Rendering posts/edit
+Completed in 0.06787 (14 reqs/sec) | Rendering: 0.05575 (82%) | DB: 0.05728 (84%) | 200 OK [http://test.host/posts/953125641/edit]
+  [4;35;1mSQL (0.001137)[0m   [0mROLLBACK[0m
+  [4;36;1mSQL (0.001073)[0m   [0;1mBEGIN[0m
+
+
+Processing PostsController#index (for 0.0.0.0 at 2009-02-05 21:47:05) [GET]
+  Session ID: 
+  Parameters: {"action"=>"index", "controller"=>"posts"}
+  [4;35;1mPost Load (0.005636)[0m   [0mSELECT * FROM `posts` [0m
+Rendering template within layouts/posts
+Rendering posts/index
+Completed in 0.03228 (30 reqs/sec) | Rendering: 0.02018 (62%) | DB: 0.00785 (24%) | 200 OK [http://test.host/posts]
+  [4;36;1mSQL (0.001151)[0m   [0;1mROLLBACK[0m
+  [4;35;1mSQL (0.001231)[0m   [0mBEGIN[0m
+
+
+Processing PostsController#new (for 0.0.0.0 at 2009-02-05 21:47:05) [GET]
+  Session ID: 
+  Parameters: {"action"=>"new", "controller"=>"posts"}
+Rendering template within layouts/posts
+Rendering posts/new
+Completed in 0.03914 (25 reqs/sec) | Rendering: 0.03027 (77%) | DB: 0.00238 (6%) | 200 OK [http://test.host/posts/new]
+  [4;36;1mSQL (0.001093)[0m   [0;1mROLLBACK[0m
+  [4;35;1mSQL (0.001030)[0m   [0mBEGIN[0m
+  [4;36;1mPost Load (0.005749)[0m   [0;1mSELECT * FROM `posts` WHERE (`posts`.`id` = 953125641) [0m
+
+
+Processing PostsController#show (for 0.0.0.0 at 2009-02-05 21:47:05) [GET]
+  Session ID: 
+  Parameters: {"action"=>"show", "id"=>"953125641", "controller"=>"posts"}
+  [4;35;1mPost Load (0.017381)[0m   [0mSELECT * FROM `posts` WHERE (`posts`.`id` = 953125641) [0m
+Rendering template within layouts/posts
+Rendering posts/show
+Completed in 0.03963 (25 reqs/sec) | Rendering: 0.01200 (30%) | DB: 0.02525 (63%) | 200 OK [http://test.host/posts/953125641]
+  [4;36;1mSQL (0.001070)[0m   [0;1mROLLBACK[0m
+  [4;35;1mSQL (0.001040)[0m   [0mBEGIN[0m
+  [4;36;1mPost Load (0.006698)[0m   [0;1mSELECT * FROM `posts` WHERE (`posts`.`id` = 953125641) [0m
+
+
+Processing PostsController#update (for 0.0.0.0 at 2009-02-05 21:47:05) [PUT]
+  Session ID: 
+  Parameters: {"post"=>{"title"=>"Nene", "body"=>"Are rare birds."}, "action"=>"update", "id"=>"953125641", "controller"=>"posts"}
+  [4;35;1mPost Load (0.006724)[0m   [0mSELECT * FROM `posts` WHERE (`posts`.`id` = 953125641) [0m
+  [4;36;1mPost Update (0.024014)[0m   [0;1mUPDATE `posts` SET `title` = 'Nene', `body` = 'Are rare birds.', `updated_at` = '2009-02-06 02:47:05' WHERE `id` = 953125641[0m
+Redirected to http://test.host/posts/953125641
+Completed in 0.06731 (14 reqs/sec) | DB: 0.03955 (58%) | 302 Found [http://test.host/posts/953125641?post%5Bbody%5D=Are+rare+birds.&post%5Btitle%5D=Nene]
+  [4;35;1mSQL (0.048554)[0m   [0mROLLBACK[0m
